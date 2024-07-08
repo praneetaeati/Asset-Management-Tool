@@ -1,0 +1,6 @@
+"S.no","Computer name","User name","Department","Location","Ip Address","Custodian"
+"1","Sys1","s1","IT","G1","192.168.10.1","HR1"
+"2","Sys2","s2","IT","G2","192.168.10.2","HR2"
+"3","Sys3","s3","IT","G3","192.168.10.3","HR3"
+"4","Sys4","s4","IT","G4","192.168.10.4","HR4"
+"5","Sys5","s5","IT","G5","192.168.10.5","HR5"

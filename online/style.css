@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    
+}
+.content h2{
+    text-align: center;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    background-image: url('./images/vpt.jpg');
+    background-size:auto; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    opacity: 0.3; 
+    z-index: -1;
+}
+
+.content {
+    
+    position: relative; 
+    z-index: 1; 
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

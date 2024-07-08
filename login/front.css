@@ -1,0 +1,162 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.col {
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.headings{
+    font-weight: bold;
+}
+/* Form styles */
+.text-center {
+    text-align: center;
+}
+
+#stdForm, #empForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Link styles */
+a.text-decoration-none {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Flexbox styling */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+}
+
+.w-50 {
+    width: 80%;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+/* Text styles */
+.fw-bold {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+.employeeTextColor {
+    color: #28a745;
+}
+
+/* Responsive text */
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .d-lg-none {
+        display: none !important;
+    }
+    .d-lg-block {
+        display: block !important;
+    }
+}
+
+/* Image styles */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgSize {
+    width: 100px;
+    height: 100px;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #28a745;
+    color: #28a745;
+}
+
+.btn-outline:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.employeeBtnColor {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.employeeBtnColor:hover {
+    background-color: #28a745;
+    color: white;
+}

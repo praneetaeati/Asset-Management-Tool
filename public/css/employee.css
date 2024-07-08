@@ -1,0 +1,43 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 10;
+    left: 0;
+    height: 90vh;
+    width: 100vw;
+    background-image: url('../images/vpt.jpg');
+    background-size: auto; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    opacity: 0.3; 
+    z-index: -1;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

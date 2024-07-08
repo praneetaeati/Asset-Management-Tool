@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Report Embedding</title>
+    <script src="https://cdn.jsdelivr.net/npm/powerbi-client/dist/powerbi.min.js"></script>
+</head>
+<body>
+    <div id="embedContainer" style="height: 600px; width: 100%;"></div>
+    <iframe title="Excel" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=8292cf91-35f9-48fd-9881-26bc307cc115&autoAuth=true&ctid=ff335ba2-bb68-489a-bbdd-f49ab4319838" frameborder="0" allowFullScreen="true"></iframe>
+    <script>
+        let loadedResolve, reportLoaded = new Promise((res, rej) => { loadedResolve = res; });
+        let renderedResolve, reportRendered = new Promise((res, rej) => { renderedResolve = res; });
+
+        models = window['powerbi-client'].models;
+
+        function embedPowerBIReport() {
+            let accessToken = 'YOUR_ACCESS_TOKEN';
+            let embedUrl = 'https://app.powerbi.com/reportEmbed?reportId=8292cf91-35f9-48fd-9881-26bc307cc115&autoAuth=true&ctid=ff335ba2-bb68-489a-bbdd-f49ab4319838';
+            let embedReportId = 'YOUR_REPORT_ID';
+            let tokenType = '1'; // 0 for Aad, 1 for Embed
+            let permissions = models.Permissions.All;
+
+            let config = {
+                type: 'report',
+                tokenType: tokenType == '0' ? models.TokenType.Aad : models.TokenType.Embed,
+                accessToken: accessToken,
+                embedUrl: embedUrl,
+                id: embedReportId,
+                permissions: permissions,
+                settings: {
+                    panes: {
+                        filters: {
+                            visible: true
+                        },
+                        pageNavigation: {
+                            visible: true
+                        }
+                    },
+                    bars: {
+                        statusBar: {
+                            visible: true
+                        }
+                    }
+                }
+            };
+
+            let embedContainer = document.getElementById('embedContainer');
+            let report = powerbi.embed(embedContainer, config);
+
+            report.off("loaded");
+            report.on("loaded", function () {
+                loadedResolve();
+                report.off("loaded");
+            });
+
+            report.off("error");
+            report.on("error", function (event) {
+                console.log(event.detail);
+            });
+
+            report.off("rendered");
+            report.on("rendered", function () {
+                renderedResolve();
+                report.off("rendered");
+            });
+        }
+
+        embedPowerBIReport();
+
+        reportLoaded.then(() => {
+            console.log('Report Loaded');
+            // Insert here the code you want to run after the report is loaded
+        });
+
+        reportRendered.then(() => {
+            console.log('Report Rendered');
+            // Insert here the code you want to run after the report is rendered
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.thr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.thr .image {
+    height: 70px;
+    width: auto;
+}
+
+.navbar {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #000000;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #31b0d5;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 20px;
+}
+
+.home {
+    background-image: url("../public/images/3.jpg");
+    background-repeat: no-repeat;
+    margin: 0 130px;
+    height: 700px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h1 {
+    font-size: 80px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.typing{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-right: .15em solid #000;
+    animation: typing 4s steps(30, end) infinite, blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+.about h1 {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.welcome-container,
+.para-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.welcome-container {
+    max-width: 40%;
+}
+
+.para-container {
+    max-width: 40%;
+}
+
+.welcome {
+    text-align: left;
+    font-size: 35px;
+    text-align: center;
+}
+
+.para {
+    font-size: 18px;
+    text-align: left;
+}
+.justimg{
+    height: 600px;
+    border-radius: 20px;
+}
+.bg{
+    background-image: url("../public/images/1.jpg");
+    background-repeat: no-repeat;
+    margin: 0 130px;
+    height: 700px;
+    border-radius: 20px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./front.css">
+    <style>
+        /* Your existing styles here */
+        .submittt {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black; /* Change this to your desired button color */
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submitt {
+            color: white;
+            text-decoration: none;
+        }
+
+        .submittt:hover {
+            background-color: #0056b3; /* Change this to your desired hover color */
+        }
+
+        .submittt i {
+            margin-left: 8px; /* Space between text and icon */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML for login forms -->
+    <div class="col">
+        <div class="card card-body cardStudent shadow">
+            <form class="text-center" id="stdForm" action="../employee/elogin.html" method="get">
+                <a href="javascript:void(0);" class="text-decoration-none" onclick="javascript:submitForm('stdForm')">
+                    <div class="d-flex justify-content-start align-items-stretch">
+                        <div class="w-50">
+                            <img src="../public/images/employee logo.png " class="img-responsive center imgSize" alt="...">
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="headings">Employee</div>
+                            <br>
+                            <button type="submit" class="submittt">Login <i class="fas fa-arrow-right"></i></button>
+
+                        </div>
+                    </div>
+                </a>
+            </form>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card card-body cardEmployee shadow">
+            <form class="text-center" id="empForm" action="../login/login.html" method="get">
+                <a href="javascript:void(0);" class="text-decoration-none" onclick="javascript:submitForm('empForm')">
+                    <div class="d-flex justify-content-start align-items-stretch">
+                        <div class="w-50">
+                            <img src="../public/images/admin logo.jpg" class="img-responsive center imgSize" alt="...">
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="headings">Admin</div>
+                            <br>
+                            <button type="submit" class="submittt">Login <i class="fas fa-arrow-right"></i></button>
+
+                        </div>
+                    </div>
+                </a>
+            </form>
+        </div>
+    </div>
+    
+    <script src="front.js"></script>
+</body>
+</html>
+

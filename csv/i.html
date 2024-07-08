@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Asset Management</title>
+    <link rel="stylesheet" href="./s.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <h2 class="main-heading">Port IT Asset Management</h2>
+    <input type="file" id="upload-file" accept=".csv, .xlsx, .xls" />
+    <button id="save-file">Save File</button>
+    <button id="add-row">Add Row</button>
+    <button id="add-column">Add Column</button>
+    <button id="remove-row">Remove Selected Rows</button>
+    <button id="remove-column">Remove Selected Columns</button>
+    <input type="text" id="search-input" placeholder="Search...">
+    <table id="asset-table">
+        <thead>
+            <tr class="main-row">
+                <th><input type="checkbox" class="column-checkbox" /> S.No</th>
+                <th><input type="checkbox" class="column-checkbox" /> Computer name</th>
+                <th><input type="checkbox" class="column-checkbox" /> User name</th>
+                <th><input type="checkbox" class="column-checkbox" /> Department</th>
+                <th><input type="checkbox" class="column-checkbox" /> Location</th>
+                <th><input type="checkbox" class="column-checkbox" /> IP Address</th>
+                <th><input type="checkbox" class="column-checkbox" /> Custodian</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="scr.js"></script>
+</body>
+</html>
+   

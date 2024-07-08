@@ -1,0 +1,153 @@
+
+.one {
+    background-color: #007BFF;
+    height: 8vh;
+    width: 100%;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 100;
+}
+
+.one button {
+    background-color: #007BFF;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.one button:hover {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+.one .content {
+    display: none;
+    position: absolute;
+    background-color: #007BFF;
+    padding: 5px;
+    top: 8vh; /* Adjusted to ensure it shows below the .one bar */
+    left: 10px; /* Adjusted for positioning */
+    z-index: 110;
+    width: 20vw;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.one .content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.one .content a:hover {
+    background-color: white;
+    color: #007BFF;
+}
+
+.two {
+    height: 9vh;
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.two h1 {
+    margin: 0;
+}
+
+.navbar {
+    background-color: #007BFF;
+    overflow: hidden;
+    position: fixed;
+    top: 17vh;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+}
+
+.half-size-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-radius: 0 400px 400px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.half-size-card h5 {
+    margin-bottom: 10px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 20;
+}
